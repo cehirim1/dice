@@ -32,7 +32,11 @@ class DiceTest {
         assertTrue(dice.roll() <= dice.getSides());
     }
 
+@Test
+void testFail(){
 
+        fail();
+}
     @Test
     void testRollMany() {
         assertThrows(ArrayIndexOutOfBoundsException.class, this::testRolls);
