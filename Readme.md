@@ -1,1 +1,2 @@
 [![codecov](https://codecov.io/github/cehirim1/dice/branch/master/graph/badge.svg?token=A3O2N4Z8JX)](https://codecov.io/github/cehirim1/dice)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/cehirim1/dice/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/cehirim1/dice/tree/master)
