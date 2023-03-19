@@ -1,9 +1,11 @@
 import org.example.Dice;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 
 /**
@@ -29,25 +31,25 @@ class DiceTest {
                 () -> assertEquals("blue", getDice().getColor())
         );
     }
-//
-//    @Test
-//    public void testRoll() {
-//        assertTrue(getDice().roll() > 0);
-//    }
-//
-//    @ParameterizedTest
-//    @ValueSource(ints = {0, 2, 3, 4, 6})
-//    public void testRollArray(int num) {
-//        int[] diceArr = getDice().rollMany(num);
-//        assertNotNull(diceArr);
-//    }
-//
-//    @ParameterizedTest
-//    @ValueSource(ints = {-3, -1})
-//    public void testRollMany(int num) {
-//        assertThrows(NegativeArraySizeException.class, () -> getDice().rollMany(num));
-//    }
-//
+
+    @Test
+    public void testRoll() {
+        assertTrue(getDice().roll() > 0);
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {0, 2, 3, 4, 6})
+    public void testRollArray(int num) {
+        int[] diceArr = getDice().rollMany(num);
+        assertNotNull(diceArr);
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {-3, -1})
+    public void testRollMany(int num) {
+        assertThrows(NegativeArraySizeException.class, () -> getDice().rollMany(num));
+    }
+
     public Dice getDice() {
         return dice;
     }
