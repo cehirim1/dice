@@ -1,0 +1,1 @@
+[![codecov](https://codecov.io/github/cehirim1/dice/branch/master/graph/badge.svg?token=A3O2N4Z8JX)](https://codecov.io/github/cehirim1/dice)
